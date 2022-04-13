@@ -1,0 +1,48 @@
+<!--var keyword-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    <script>
+        var val='Hello JavaScript';
+      console.log(val);
+       
+        //it can be updated
+        val="Hello LWC";
+        console.log(val);
+        val=100;
+        console.log(val);
+        val=true;
+        console.log(val);
+
+        //it can be redeclared
+        var val=1000;
+        console.log(val);
+
+        //scope
+
+        //its supports 2 type of scope
+       // 1.global
+       var subject="LWC";
+       console.log("subject="+subject);
+        //2.functional
+          function abc(){
+              var x=10;
+              console.log("X="+x);
+          }
+          abc();
+         // console.log(x);//error=> x is not defined
+
+        //its not support to block level scope
+         
+       if(10==10){
+            var y=20;
+        }
+        console.log('Y='+y);
+
+    </script>
+</body>
+</html>

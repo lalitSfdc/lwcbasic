@@ -1,0 +1,46 @@
+<!-- let keyword -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+       let x=10;
+       console.log('X='+x);
+       //it can be updated
+       x=20;
+       console.log('X='+x);
+
+       //can't be redeclared
+     //  let x=30;//error=> x has already been declared
+
+     //scopes 
+     //its supports global,fuctional and block scope
+     //1.global scope
+     let y=10;
+       console.log('Y='+y);
+       //2.functional scope
+
+       function scope(){
+           let z=20;
+           console.log('Z='+z);
+       }
+       scope();
+      // console.log('Z='+z);//error=> Z is not defined
+      //3.block level scope 
+      if(10==10){
+          let val='i am in block level scope';
+          console.log('val='+val);
+      }
+    //  console.log('val='+val);//error=> val is not defined
+
+      var temp1='i am in temp1';
+      let temp2='i am in temp2';
+      console.log('temp1='+temp1);
+      console.log(window.temp1);//output
+      console.log(window.temp2);//undefined
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
