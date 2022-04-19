@@ -1,0 +1,30 @@
+<!-- By using an object constructor -->
+
+
+<html>
+<head>
+    <script>
+        function Employee(id,name,salary){
+                   this.id=id;
+                   this.name=name;
+                   this.salary=salary;
+
+                   
+        }
+
+        salary=function(salary){
+            this.salary=salary;
+        }
+    </script>
+</head>
+<body>
+    <script>
+        e=new Employee(104,"Ashish",50000.80);
+        e.salary(60000);
+        document.write("Id:"+e.id+" name:"+e.name+" salary:"+e.salary);
+        
+        document.write("<p>After salary update</p>");
+        document.write("Id:"+e.id+" name:"+e.name+" salary:"+e.salary);
+    </script>
+</body>
+</html>
