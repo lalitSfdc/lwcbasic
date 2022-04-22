@@ -1,0 +1,24 @@
+<!-- spread operator
+  4. Shallow Copy:-
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <script>
+        console.log('**************without shallow copy****************')
+        let arr1= ['X','Y','Z'];
+        let arr2=arr1;
+        arr2.push('a');
+        console.log(arr1);
+        console.log(arr2);
+        console.log('**************with shallow copy****************')
+        let arr3= ['X','Y','Z'];
+        let arr4=[...arr3];
+        arr4.push('a');
+        console.log(arr3);
+        console.log(arr4);
+    </script>
+</body>
+</html>

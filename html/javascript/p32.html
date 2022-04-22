@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <script>
+        let student={name:"ABC",age:25,branch:"IT"};
+        console.log("Without using Object destructuring");
+        let n=student.name;
+        let a=student.age;
+        let b=student.branch;
+        console.log("Name="+n+" and Age="+a+" and Branch="+b);
+
+        console.log("using Object destructuring");
+        let{name,age,branch}=student;
+        console.log("Name="+name+" and Age="+age+" and Branch="+branch);
+    </script>
+</body>
+</html>
