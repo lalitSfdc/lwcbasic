@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+    <script>
+        let arr=[1,2,3,4,5,6,7,8,9,10];
+       /* let newArr=[];
+        for (let i=0; i<arr.length; i++){
+            newArr[i]=arr[i]*2;
+        }
+        console.log(arr);
+        console.log(newArr);
+        */
+        
+     let newArr=arr.map(function(currentValue,index,array){
+        console.log(`current value is:${currentValue} and index is:${index}`);
+        return currentValue*2;
+     });
+    console.log(newArr);
+    </script>
+</body>
+</html>
