@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    function isSuccess(data){
+       return new Promise(function(resolve, reject){
+            if(data=='success'){
+                return resolve({name:'abc',age:23,staus:'success'});
+            }else{
+                return reject({state:'fail',code:404,message:'Failed to create'});
+            }
+       });
+    }
+</script>
+</head>
+<body>
+<script>
+    isSuccess('unsuccess').then(function(result){
+        console.log('***************i am in then***********');
+        console.log(result);
+    }).catch(function(error){
+        console.log('***************i am in error***********');
+        if(error.code==404){
+        console.log(error.message);
+        }
+    })
+</script>    
+</body>
+</html>

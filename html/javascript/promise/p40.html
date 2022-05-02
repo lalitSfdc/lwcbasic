@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    function isSuccess(data){
+       return new Promise(function(resolve, reject){
+            if(data=='success'){
+                return resolve('Successfully created');
+            }else{
+                return reject('Failed to create');
+            }
+       });
+    }
+</script>
+</head>
+<body>
+<script>
+    console.log(isSuccess('success'));
+</script>    
+</body>
+</html>
