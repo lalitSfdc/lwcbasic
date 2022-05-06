@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function abc(){
+            alert('button click event fired!');
+        }
+        function myfunction(event){
+            let divElement=document.querySelector('div');
+            divElement.innerHTML=event.value;
+        }
+
+        function myChange(evt){
+            let divElement=document.querySelector('div');
+            switch(evt.value){
+                case 'India':
+                divElement.innerHTML='Nagpur';
+                break;
+                case 'USA':
+                divElement.innerHTML='NewYork';
+                break;
+                case 'Canada':
+                divElement.innerHTML='Abc';
+                break;
+            }
+        }
+
+        function changeOver(event) {
+            event.src='2.jpg';
+        }
+
+        function changeOut(event) {
+            event.src='1.jpg';
+        }
+
+        function onloadColor(){
+
+
+            
+            document.body.style.backgroundColor = 'red';
+        }
+    </script>
+</head>
+<body onload="onloadColor();">
+    <div></div>
+    <input type="text" onkeydown="myfunction(this);"/>
+    <button onclick="abc();">click me</button>
+    <select onchange="myChange(this)">
+        <option>India</option>
+        <option>USA</option>
+        <option>Canada</option>
+    </select>
+    <hr/>
+    <img src="1.jpg" onmouseover="changeOver(this);" onmouseout="changeOut(this);"/>
+</body>
+</html>
